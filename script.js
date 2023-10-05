@@ -1,6 +1,6 @@
 window.onscroll = function() {stickyNav()};
 
-let navbar = document.querySelector(".navbar");
+let navbar = document.querySelector('.navbar');
 
 function stickyNav() {
     if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {

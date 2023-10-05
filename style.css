@@ -11,11 +11,10 @@ body {
 
 nav {
     height: 4rem;
-    background-color: #14141f;
+    background-color: #141518;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* width: 100%; */
     z-index: 99;
     transition: all ease 0.4s;
     position: sticky;
@@ -34,7 +33,7 @@ nav a {
     font-size: 1.3rem;
     font-weight: 500;
     letter-spacing: 0.2rem;
-    color: #38384e;
+    color: #444a55;
     transition: all ease 0.3s;
 }
 
@@ -43,7 +42,7 @@ nav a:hover  {
 }
 
 .main .container {
-    background-color: #08080e;
+    background-color: #0d0d0e;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,10 +50,10 @@ nav a:hover  {
 }
 
 h1 {
-    color: #38384e;
+    color: #B9BAA3;
     font-weight: 700;
     font-size: 3.6rem;
-    letter-spacing: -0.2rem;
+    letter-spacing: -0.1rem;
     word-spacing: 0.5rem;
     margin: 5rem 0 10rem 0;
     transition: all ease 0.3s;
@@ -71,7 +70,7 @@ h1 {
 .projects div {
     height: 25rem;
     width: 25rem;
-    background-color: #38384e;
+    background-color: #444a55;
     transition: all ease 0.4s;
 }
 
@@ -81,7 +80,7 @@ h1 {
 }
 
 h2 {
-    color: #38384e;
+    color: #444a55;
     letter-spacing: 0.3rem;
     word-spacing: 0.3rem;
     font-size: 1.5rem;
@@ -89,7 +88,7 @@ h2 {
 }
 
 .info {
-    background-color: #0f0f18;
+    background-color: #141518;
     display: flex;
     justify-content: space-between;
 
@@ -101,4 +100,20 @@ nav, .info {
 
 .contact {
     width: 30rem;
+}
+
+.logo {
+    position: relative;
+}
+
+.logo .logo-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all ease 0.3s;
+}
+
+.logo .logo-hover:hover {
+    opacity: 1;
 }

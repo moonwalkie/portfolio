@@ -15,6 +15,12 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* width: 100%; */
+    z-index: 99;
+    transition: all ease 0.4s;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
 }
 
 nav ul {

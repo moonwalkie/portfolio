@@ -117,3 +117,93 @@ nav, .info {
 .logo .logo-hover:hover {
     opacity: 1;
 }
+
+/* Form */
+
+form {
+    margin: 0;
+}
+
+label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    border-bottom: solid 2px #444a55;
+    color: #f5f0dc;
+    display: block;
+    outline: 0;
+    padding: 0;
+    text-decoration: none;
+    width: 100%;
+    font-family: 'Source Sans Pro', Helvetica, sans-serif;
+    margin-bottom: 3rem;
+    font-size: 1rem;
+    min-height: 2rem;
+}
+
+select {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' preserveAspectRatio='none' viewBox='0 0 40 40'%3E%3Cpath d='M9.4,12.3l10.4,10.4l10.4-10.4c0.2-0.2,0.5-0.4,0.9-0.4c0.3,0,0.6,0.1,0.9,0.4l3.3,3.3c0.2,0.2,0.4,0.5,0.4,0.9 c0,0.4-0.1,0.6-0.4,0.9L20.7,31.9c-0.2,0.2-0.5,0.4-0.9,0.4c-0.3,0-0.6-0.1-0.9-0.4L4.3,17.3c-0.2-0.2-0.4-0.5-0.4-0.9 c0-0.4,0.1-0.6,0.4-0.9l3.3-3.3c0.2-0.2,0.5-0.4,0.9-0.4S9.1,12.1,9.4,12.3z' fill='%23c9c9c9' /%3E%3C/svg%3E");
+    background-size: 1.25rem;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 1rem) center;
+    height: 3em;
+    padding-right: 3em;
+    text-overflow: ellipsis;
+    margin-bottom: 1.5em;
+}
+
+textarea {
+    padding: 0;
+    width: 100%;
+    resize: vertical;
+}
+
+button {
+    border: none;
+    border-radius: .3rem;
+    background-color: #444a55;
+    color: #c9c9c9;
+    padding: 0.8rem 1.8rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    transition: all ease 0.3s;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #f5f0dc;
+    color: #585858;
+}
+
+button:focus {
+    background-color: #cecabb;
+}
+
+/* Responsive styles */
+
+@media screen and (max-width: 480px) {
+    form {
+        width: 100%;
+    }
+
+    label,
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    select {
+        width: 100%;
+    }
+}

@@ -1,15 +1,23 @@
 window.onscroll = function() {stickyNav()};
 
 let navbar = document.querySelector('.navbar');
+let logo = document.querySelector('.mw');
+let logoHover = document.querySelector('.mw.hover');
 
+// Sticky Navbar on the top
 function stickyNav() {
     if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
     navbar.style.cssText = "height: 3.2rem;";
+    logo.style.cssText = "height: 2.5rem";
+    logoHover.style.cssText = "height: 2.5rem"; // Adjust the navbar and the logo when scrolling
   } else {
     navbar.style.cssText = "height: 4rem;";
+    logo.style.cssText = "height: 3rem";
+    logoHover.style.cssText = "height: 3rem";
   }
 }
 
+// Typewriter effect when the page loads
 document.addEventListener("DOMContentLoaded", function () {
   const h1 = document.getElementById("typewriter");
   const text = [

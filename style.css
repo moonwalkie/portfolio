@@ -111,12 +111,19 @@ h1 {
     width: 25rem;
     background-color: #858e9e;
     transition: all ease 0.4s;
-    border-radius: 0.2rem;
+    border-radius: 0.4rem;
+    overflow: hidden;
 }
 
 .projects div:hover {
     transform: scale(1.08);
     cursor: pointer;
+}
+
+.box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* Contact */

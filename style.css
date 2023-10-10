@@ -169,12 +169,14 @@ h2 {
 .info {
     background: linear-gradient(#141518, #0b0c0e);
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 6rem;
+    padding-bottom: 12rem;
+    gap: 5rem;
 }
 
 .contact {
     z-index: 90;
-    padding-top: 6rem;
 }
 
 /* About Me */
@@ -183,7 +185,6 @@ h2 {
     display: flex;
     justify-content: flex-end;
     gap: 2rem;
-    margin: -25rem 0 10rem 0;
 }
 
 .about .text {
@@ -206,6 +207,37 @@ h2 {
 .container-about img {
     border-radius: 1rem;
     box-shadow: 3rem 3rem 3rem #0b0c0e;
+}
+
+/* Social Icons */
+
+.icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 6rem;
+}
+
+.icons span {
+    color: #858e9e;
+    padding: 0.5rem;
+    border: 1px solid #858e9e;
+    border-radius: 0.3rem;
+    transition: all ease 0.3s;
+}
+
+.icons span:hover {
+    color: #f5f0dc;
+    border: 1px solid #f5f0dc;
+    cursor: pointer;
+}
+
+/* Copyright */
+
+.copyright {
+    margin-top: 3rem;
+    color: #858e9e;
+    font-size: 1.2rem;
+    font-weight: 300;
 }
 
 /* Form */
@@ -308,15 +340,6 @@ button:hover {
 
 button:focus {
     background-color: #cecabb;
-}
-
-/* Copyright */
-
-.copyright {
-    margin-top: 8rem;
-    color: #858e9e;
-    font-size: 1.2rem;
-    font-weight: 300;
 }
 
 /* Responsive styles */

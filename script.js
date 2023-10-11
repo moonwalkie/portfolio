@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     "Welcome to my portfolio."
   ];
   const delay = 100; // Adjust the delay between letters
+  const initialDelay = 1000; // Initial delay before starting the typewriter effect
 
   let lineIndex = 0;
   let charIndex = 0;
@@ -49,5 +50,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  typeLetter();
+  // Delay the start of the typewriter effect by 1 second
+  setTimeout(function () {
+    typeLetter();
+  }, initialDelay);
 });

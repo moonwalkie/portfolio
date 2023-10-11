@@ -3,10 +3,31 @@ document.addEventListener("DOMContentLoaded", function () {
     const lightboxImagesContainer = document.getElementById("lightbox-images-container");
     const closeButton = document.getElementById("close");
 
+    // Array of title texts
+    const titleArray = [
+        "PHOTO MANIPULATION",
+        "LANDSCAPE ILLUSTRATIONS",
+        "LOGOS",
+        "ILLUSTRATIONS",
+        "JUNGLE LANDSCAPE SERIES",
+        "ICONS",
+        "BACKGROUNDS",
+        "VECTOR PORTRAITS",
+        "FORUM SIGNATURES"
+    ];
+    
     // Function to open the lightbox with an array of image sources
-    function openLightbox(imageSrcArray) {
+    function openLightbox(imageSrcArray, title) {
         // Clear the existing content in the lightbox
         lightboxImagesContainer.innerHTML = "";
+
+        // Create a title element and set its text
+        const titleElement = document.createElement("div");
+        titleElement.classList.add("lightbox-title");
+        titleElement.textContent = title;
+
+        // Append the title to the lightbox
+        lightboxImagesContainer.appendChild(titleElement);
 
         // Add each image to the lightbox
         imageSrcArray.forEach((src) => {
@@ -40,7 +61,8 @@ document.addEventListener("DOMContentLoaded", function () {
             "./images/gta-v-photo-manipulation/XSS-BG-GTA-V.jpg"
         ];
 
-        openLightbox(imageSrcArray);
+        const title = titleArray[0];
+        openLightbox(imageSrcArray, title);
     });
 
     const box2 = document.querySelector(".box.two");
@@ -54,7 +76,8 @@ document.addEventListener("DOMContentLoaded", function () {
             "./images/landscape-illustrations/FRESH-AIR.png"
         ];
 
-        openLightbox(imageSrcArray);
+        const title = titleArray[1];
+        openLightbox(imageSrcArray, title);
     });
 
     const box3 = document.querySelector(".box.three");
@@ -70,7 +93,8 @@ document.addEventListener("DOMContentLoaded", function () {
             "./images/logos/WEIMO-PROD-XSS-TV.png"
         ];
 
-        openLightbox(imageSrcArray);
+        const title = titleArray[2];
+        openLightbox(imageSrcArray, title);
     });
 
     const box4 = document.querySelector(".box.four");
@@ -83,7 +107,8 @@ document.addEventListener("DOMContentLoaded", function () {
             "./images/illustrations/Red-Apple-Background.png"
         ];
 
-        openLightbox(imageSrcArray);
+        const title = titleArray[3];
+        openLightbox(imageSrcArray, title);
     });
     
     const box5 = document.querySelector(".box.five");
@@ -97,7 +122,8 @@ document.addEventListener("DOMContentLoaded", function () {
             "./images/jungle-landscape-series/Jungle-Landscape-Background-by-Moon.png"
         ];
 
-        openLightbox(imageSrcArray);
+        const title = titleArray[4];
+        openLightbox(imageSrcArray, title);
     });
 
     const box6 = document.querySelector(".box.six");
@@ -108,7 +134,8 @@ document.addEventListener("DOMContentLoaded", function () {
             "./images/icons/XSS-RANKS-PREVIEW.png"
         ];
 
-        openLightbox(imageSrcArray);
+        const title = titleArray[5];
+        openLightbox(imageSrcArray, title);
     });
 
     const box7 = document.querySelector(".box.seven");
@@ -122,7 +149,8 @@ document.addEventListener("DOMContentLoaded", function () {
             "./images/various-backgrounds/Abstract-Polygon-Background-by-Moon.png"
         ];
 
-        openLightbox(imageSrcArray);
+        const title = titleArray[6];
+        openLightbox(imageSrcArray, title);
     });
 
     const box8 = document.querySelector(".box.eight");
@@ -133,7 +161,8 @@ document.addEventListener("DOMContentLoaded", function () {
             "./images/vector-portraits/Eminem-Artwork.png" 
         ];
 
-        openLightbox(imageSrcArray);
+        const title = titleArray[7];
+        openLightbox(imageSrcArray, title);
     });
 
     const box9 = document.querySelector(".box.nine");
@@ -147,7 +176,8 @@ document.addEventListener("DOMContentLoaded", function () {
             "./images/forum-signatures/AQUARIUM-Signature.png"
         ];
 
-        openLightbox(imageSrcArray);
+        const title = titleArray[8];
+        openLightbox(imageSrcArray, title);
     });
 
     // Attach click event listener to the close button

@@ -14,18 +14,27 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="logo">
-            <img src="./assets/mw-logo-metallic.svg" alt="MW LOGO METALLIC" class="mw">
-            <a href="https://github.com/moonwalkie" target="_blank"><img src="./assets/mw-logo-beige.svg" alt="MW LOGO BEIGE" class="mw hover"></a>
+        <div class="container-nav max-width">
+            <div class="logo">
+                <img src="./assets/mw-logo-metallic.svg" alt="MW LOGO METALLIC" class="mw">
+                <a href="https://github.com/moonwalkie" target="_blank"><img src="./assets/mw-logo-beige.svg" alt="MW LOGO BEIGE" class="mw hover"></a>
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <div class="bar-container">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
         </div>
-        <ul>
-            <a href="#projects">PROJECTS</a>
-            <a href="#about">ABOUT</a>
-            <a href="#contact">CONTACT</a>
-        </ul>
     </nav>
     <div class="main">
-        <div class="container">
+        <div class="container-main max-width">
             <div class="header">
                 <h1 id="typewriter"></h1>
             </div>
@@ -69,7 +78,9 @@
                 </div>
             </div>
         </div>
-        <div class="info">
+    </div>
+    <div class="info">
+        <div class="container-info max-width">
             <div class="contact" id="contact">
                 <h2>GET IN TOUCH</h2>
                 <form method="post" action="https://formspree.io/f/mvojvjwv">
@@ -100,7 +111,9 @@
                 </div>
                 <div class="container-about">
                     <h2>ABOUT ME</h2>
-                    <img src="./images/about-me.jpg" alt="An image of me smiling" width="350rem">
+                    <div class="about-me-img">
+                        <img src="./images/about-me.jpg" alt="An image of me smiling">
+                    </div>
                 </div>
             </div>
         </div>

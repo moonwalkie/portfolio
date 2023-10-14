@@ -1,6 +1,6 @@
 window.onscroll = function() {stickyNav()};
 
-let navbar = document.querySelector('.navbar');
+let navbar = document.querySelector('.container-nav');
 let logo = document.querySelector('.mw');
 let logoHover = document.querySelector('.mw.hover');
 
@@ -54,4 +54,29 @@ document.addEventListener("DOMContentLoaded", function () {
   setTimeout(function () {
     typeLetter();
   }, initialDelay);
+});
+
+// Toggle the hamburger menu
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', function() {
+    navLinks.classList.toggle('show');
+});
+
+function toggleMenu() {
+  const menuToggle = document.querySelector(".menu-toggle");
+  menuToggle.classList.toggle("menu-open");
+}
+
+document.addEventListener("click", function (event) {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+  const isClickInsideMenu = menuToggle.contains(event.target) || navLinks.contains(event.target);
+  const isMenuOpen = navLinks.classList.contains("show");
+
+  if (!isClickInsideMenu && isMenuOpen) {
+    navLinks.classList.remove("show");
+    menuToggle.classList.remove("menu-open");
+  }
 });

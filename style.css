@@ -19,20 +19,32 @@ body {
     font-family: 'Source Sans Pro', Helvetica, sans-serif;
 }
 
+.max-width {
+    max-width: 1500px;
+    margin: auto;
+}
+
+.navbar, .info {
+    padding: 0 10rem;
+}
+
 /* Navbar */
 
-nav {
-    height: 4rem;
+.navbar {
     background-color: #141518;
+    box-shadow: 0 0 0.5rem #0c0c0e;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+.container-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 99;
+    gap: 2rem;
+    height: 4rem;
     transition: all ease 0.4s;
-    position: sticky;
-    top: 0;
-    overflow: hidden;
-    box-shadow: 0 0 0.5rem #0c0c0e;
 }
 
 nav ul {
@@ -41,7 +53,7 @@ nav ul {
     list-style: none;
 }
 
-nav a {
+nav ul a {
     text-decoration: none;
     font-size: 1.3rem;
     font-weight: 500;
@@ -50,12 +62,8 @@ nav a {
     transition: all ease 0.3s;
 }
 
-nav a:hover  {
+nav ul a:hover  {
     color: #f5f0dc;
-}
-
-nav, .info {
-    padding: 0 15rem;
 }
 
 /* Logo */
@@ -83,12 +91,15 @@ nav, .info {
 
 /* Header */
 
-.main .container {
+.main {
     background: linear-gradient(#0d0d0e, #18181a, #0d0d0e);
+}
+
+.container-main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10rem 5rem 10rem;
+    padding: 10rem 5rem;
 }
 
 h1 {
@@ -97,16 +108,17 @@ h1 {
     font-size: 3.6rem;
     letter-spacing: -0.1rem;
     word-spacing: 0.5rem;
-    margin: 0 0 8rem 0;
+    margin-bottom: 8rem;
     text-align: center;
     transition: all ease 0.3s;
-    height: 10rem;
+    min-height: 10rem;
     overflow: hidden;
 }
 
 hr {
     height: 1px;
-    width: 80rem;
+    position: relative;
+    width: 100%;
     border: none;
     background: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, #f5f0dc));
     animation: fadeLine 5s ease;
@@ -124,8 +136,8 @@ hr {
 }
 
 .box {
-    height: 25rem;
-    width: 25rem;
+    max-width: 25rem;
+    aspect-ratio: 1 / 1;
     position: relative;
     overflow: hidden;
     border-radius: 0.4rem;
@@ -182,15 +194,20 @@ h2 {
 
 .info {
     background: linear-gradient(#141518, #0b0c0e);
+}
+
+.container-info {
     display: flex;
     justify-content: space-between;
-    padding-top: 6rem;
     padding-bottom: 12rem;
     gap: 5rem;
 }
 
 .contact {
     z-index: 90;
+    flex: 1;
+    max-width: 50rem;
+    padding-top: 6rem;
 }
 
 /* About Me */
@@ -199,17 +216,20 @@ h2 {
     display: flex;
     justify-content: flex-end;
     gap: 2rem;
+    padding-top: 6rem;
 }
 
 .about .text {
     color: #858e9e;
     font-style: italic;
     font-size: 1.5rem;
+    font-weight: 300;
     margin-top: 6rem;
-    width: 10rem;
+    max-width: 10rem;
     text-align: center;
     letter-spacing: 0.1rem;
     word-spacing: 0.5rem;
+    z-index: 1;
 }
 
 .container-about {
@@ -218,9 +238,19 @@ h2 {
     align-items: flex-end;
 }
 
-.container-about img {
+.about-me-img {
+    max-width: 22rem;
+    height: auto;
     border-radius: 1rem;
     box-shadow: 3rem 3rem 3rem #0b0c0e;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-me-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* Social Icons */
@@ -271,13 +301,12 @@ label {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
     margin-bottom: 2rem;
-    width: 50rem;
+    gap: 2rem;
 }
 
 .form-group {
-    flex: 0 0 calc(50% - 1rem);
+    flex: 1;
     margin-bottom: 1rem;
 }
 
@@ -299,6 +328,7 @@ textarea {
     font-weight: 300;
     min-height: 4rem;
     transition: all ease 0.3s;
+    width: 100%;
 }
 
 input[type="text"],
@@ -317,7 +347,7 @@ select {
     background-size: 1.25rem;
     background-repeat: no-repeat;
     background-position: calc(100% - 1rem) center;
-    height: 3em;
+    min-height: 3em;
     padding-right: 3em;
     text-overflow: ellipsis;
     margin-bottom: 1.5em;
@@ -327,7 +357,7 @@ textarea {
     padding: 0;
     resize: none;
     overflow: hidden;
-    width: 50rem;
+    max-width: 50rem;
 }
 
 button {
@@ -358,9 +388,8 @@ button:focus {
 
 /* Responsive styles */
 
-@media screen and (max-width: 1900px) {
-
-    .info {
+@media (max-width: 1400px) {
+    .container-info {
         flex-direction: column-reverse;
         align-items: center;
     }
@@ -368,40 +397,138 @@ button:focus {
     .about {
         margin: 0;
     }
-
-    .copyright {
-        display: flex;
-        justify-content: center;
-    }
 }
 
-@media screen and (max-width: 1000px) {
-    .navbar {
-        justify-content: center;
-    }
-
-    form {
-        padding: 0 5rem;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    h1 {
+@media (max-width: 875px) {
+    h1, h2, p {
         text-align: center;
     }
-}
 
-@media screen and (max-width: 480px) {
-    form {
+    .about {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .container-about {
+        align-items: center;
+    }
+    
+    .about .text {
+        max-width: 30rem;
+        margin-top: 1rem;
+    }
+
+    .contact, form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar, .info {
+        padding: 0 5rem;
+    }
+
+    .container-nav {
+        justify-content: space-between;
         width: 100%;
     }
 
-    label,
-    input[type="text"],
-    input[type="email"],
-    textarea,
-    select {
+    .lightbox-content {
+        padding: 3rem 4rem !important;
+    }
+
+    .lightbox img {
+        margin: 0 auto 3rem auto !important;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        background: #141518;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        box-shadow: 0 0.5rem 0.5rem -0.5rem #0c0c0e;
+        gap: 2rem;
+        max-height: 0;
+        overflow: hidden;
+        transition: all ease 0.5s;
+    }
+
+    .nav-links.show {
+        max-height: 15rem;
+        padding: 2rem;
+    }
+
+    .bar-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        width: 2.5rem;
+        height: 2rem;
+        transition: transform 0.3s;
+    }
+
+    .bar-container:hover .bar {
+        background-color: #f5f0dc;
+    }
+
+    .menu-open .bar-container {
+        transform: rotate(90deg);
+        transform-origin: center;
+    }
+    
+    .bar {
+        height: 0.3rem;
         width: 100%;
+        background-color: #858e9e;
+        border-radius: 0.1rem;
+        transition: all ease 0.3s;
+    }
+}
+
+@media (max-width: 720px) {
+    .container-main {
+        padding: 10rem 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.6rem;
+        margin-bottom: 5rem;
+    }
+
+    .container-main {
+        padding: 5rem 2rem;
+    }
+
+    .projects {
+        padding-top: 5rem;
+    }
+
+    .form-row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar, .info {
+        padding: 0 2rem;
+    }
+
+    .lightbox-content {
+        padding: 3rem 2rem !important;
+    }
+
+    .lightbox img {
+        margin: 0 auto 2rem auto !important;
+    }
+
+    .lightbox-title {
+        font-size: 1.5rem !important;
     }
 }
 
@@ -433,7 +560,7 @@ button:focus {
     }
     100% {
         opacity: 1;
-        width: 80rem;
+        width: 100%;
     }
 }
 
@@ -449,6 +576,7 @@ button:focus {
     height: 100%;
     background-color: #000000cc;
     overflow-y: scroll; /* Enable vertical scrolling within the lightbox */
+    padding: 1rem;
 }
 
 .lightbox-content {
@@ -490,4 +618,5 @@ button:focus {
     font-weight: 800;
     letter-spacing: 0.3rem;
     word-spacing: 1rem;
+    overflow-wrap: break-word;
 }

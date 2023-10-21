@@ -64,6 +64,15 @@ menuToggle.addEventListener('click', function() {
     navLinks.classList.toggle('show');
 });
 
+// Close the menu when a link is clicked
+const navLinksList = document.querySelectorAll('.nav-links a');
+navLinksList.forEach(function (link) {
+  link.addEventListener('click', function () {
+      navLinks.classList.remove('show');
+      menuToggle.classList.remove('menu-open');
+  });
+});
+
 function toggleMenu() {
   const menuToggle = document.querySelector(".menu-toggle");
   menuToggle.classList.toggle("menu-open");

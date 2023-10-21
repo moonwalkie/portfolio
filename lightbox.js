@@ -102,7 +102,6 @@ document.addEventListener("DOMContentLoaded", function () {
     box4.addEventListener("click", function () {
         const imageSrcArray = [
             "./images/illustrations/Lollipop-Lick-Artwork.png",
-            "./images/illustrations/3-SPERMS.png",
             "./images/illustrations/Apple-Background.png",
             "./images/illustrations/Red-Apple-Background.png"
         ];

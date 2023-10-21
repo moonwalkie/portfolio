@@ -245,6 +245,7 @@ h2 {
     box-shadow: 3rem 3rem 3rem #0b0c0e;
     position: relative;
     overflow: hidden;
+    display: flex;
 }
 
 .about-me-img img {

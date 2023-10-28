@@ -51,14 +51,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     box1.addEventListener("click", function () {
         const imageSrcArray = [
-            "./images/gta-v-photo-manipulation/XSS-GTA-V-Ocean-BG.jpg",
-            "./images/gta-v-photo-manipulation/XSS-GTA-V-Evening-BG-7.jpg",
-            "./images/gta-v-photo-manipulation/XSS-GTA-V-Evening-BG-6.jpg",
-            "./images/gta-v-photo-manipulation/XSS-GTA-V-Colorful-Night-BG.jpg",
-            "./images/gta-v-photo-manipulation/XSS-GTA-V-Xmas-BG.jpg",
-            "./images/gta-v-photo-manipulation/XSS-GTA-V-Autumn-BG.jpg",
-            "./images/gta-v-photo-manipulation/XSS-BG-GTA-V-2.jpg",
-            "./images/gta-v-photo-manipulation/XSS-BG-GTA-V.jpg"
+            "./images/photo-manipulation/XSS-GTA-V-Ocean-BG.jpg",
+            "./images/photo-manipulation/XSS-GTA-V-Evening-BG-7.jpg",
+            "./images/photo-manipulation/XSS-GTA-V-Evening-BG-6.jpg",
+            "./images/photo-manipulation/XSS-GTA-V-Colorful-Night-BG.jpg",
+            "./images/photo-manipulation/XSS-GTA-V-Xmas-BG.jpg",
+            "./images/photo-manipulation/XSS-GTA-V-Autumn-BG.jpg",
+            "./images/photo-manipulation/XSS-BG-GTA-V-2.jpg",
+            "./images/photo-manipulation/XSS-BG-GTA-V.jpg"
         ];
 
         const title = titleArray[0];
@@ -141,11 +141,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     box7.addEventListener("click", function () {
         const imageSrcArray = [
-            "./images/various-backgrounds/MOON-Gioconda.png",
-            "./images/various-backgrounds/MoonWalk-KING-LION&SANTA-Background.png",
-            "./images/various-backgrounds/Windows-Background-by-Moon.png",
-            "./images/various-backgrounds/Pawn-Piece-Background-by-Moon.png",
-            "./images/various-backgrounds/Abstract-Polygon-Background-by-Moon.png"
+            "./images/backgrounds/MOON-Gioconda.png",
+            "./images/backgrounds/MoonWalk-KING-LION-Background.jpg",
+            "./images/backgrounds/MoonWalk-KING-LION&SANTA-Background.png",
+            "./images/backgrounds/Windows-Background-by-Moon.png",
+            "./images/backgrounds/Pawn-Piece-Background-by-Moon.png",
+            "./images/backgrounds/Abstract-Polygon-Background-by-Moon.png"
         ];
 
         const title = titleArray[6];
@@ -169,8 +170,8 @@ document.addEventListener("DOMContentLoaded", function () {
     box9.addEventListener("click", function () {
         const imageSrcArray = [
             "./images/forum-signatures/MoonWalk-I'LL-BE-OKAY-Signature.png",
-            "./images/forum-signatures/MoonWalk-KING-LION-Signature.gif",
             "./images/forum-signatures/MoonWalk-LOGO-Signature.png",
+            "./images/forum-signatures/MoonWalk-KING-LION-Signature.gif",
             "./images/forum-signatures/MoonWalk-Gioconda-Signature.png",
             "./images/forum-signatures/AQUARIUM-Signature.png"
         ];

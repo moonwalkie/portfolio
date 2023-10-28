@@ -20,3 +20,8 @@ Throughout my journey I have used design tools such as:
 
 Although mostly Photoshop and Illustrator, which I bring deep expertise in.
 
+## Assets
+
+Sun icon by <a href="https://icons8.com" target="_blank">Icons8</a>.
+
+Moon icon by <a href="https://iconpacks.net" target="_blank">Iconpacks</a>.

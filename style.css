@@ -42,7 +42,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2rem;
+    gap: 3rem;
     height: 4rem;
     transition: all ease 0.4s;
 }
@@ -73,20 +73,51 @@ nav ul a:hover  {
 }
 
 .mw {
-    height: 3rem;
-    transition: all ease 0.3s;
-}
-
-.mw.hover {
+    height: 2.5rem;
     position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
     transition: all ease 0.3s;
 }
 
-.mw.hover:hover {
-    opacity: 1;
+.logo a {
+    display: flex;
+    align-items: center;
+}
+
+.mw.left {
+    left: 0;
+}
+
+.mw.right {
+    left: 0;
+}
+
+.mw.right:hover {
+    transform: translateX(-0.8rem);
+}
+
+/* Theme */
+
+.theme {
+    position: relative;
+    margin-left: auto;
+    margin-right: -35rem;
+}
+
+.sun-moon {
+    display: flex;
+    align-items: center;
+}
+
+.sun {
+    opacity: 0;
+}
+
+.sun,
+.moon {
+    height: 2rem;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    position: absolute;
 }
 
 /* Header */
@@ -102,7 +133,7 @@ nav ul a:hover  {
     padding: 10rem 5rem;
 }
 
-h1 {
+#typewriter {
     color: #f5f0dc;
     font-weight: 700;
     font-size: 3.6rem;
@@ -401,6 +432,10 @@ button:focus {
 }
 
 @media (max-width: 875px) {
+    .theme {
+        margin: auto;
+    }
+    
     h1, h2, p {
         text-align: center;
     }

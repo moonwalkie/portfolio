@@ -1,10 +1,12 @@
-window.onscroll = function() {stickyNav()};
+window.onscroll = function () {
+  stickyNav();
+};
 
-let navbar = document.querySelector('.container-nav');
+let navbar = document.querySelector(".container-nav");
 
 // Sticky Navbar on the top
 function stickyNav() {
-    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
     navbar.style.cssText = "height: 3.2rem;";
   } else {
     navbar.style.cssText = "height: 4rem;";
@@ -14,10 +16,7 @@ function stickyNav() {
 // Typewriter effect when the page loads
 document.addEventListener("DOMContentLoaded", function () {
   const h1 = document.getElementById("typewriter");
-  const text = [
-    "Hi! I'm Rafael",
-    "Welcome to my portfolio."
-  ];
+  const text = ["Hi! I'm Rafael", "Welcome to my portfolio."];
   const delay = 100; // Adjust the delay between letters
   const initialDelay = 500; // Initial delay before starting the typewriter effect
 
@@ -28,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (lineIndex < text.length) {
       const line = text[lineIndex];
       if (charIndex < line.length) {
-        if (line.charAt(charIndex) === '\n') {
+        if (line.charAt(charIndex) === "\n") {
           h1.innerHTML += "<br>";
         } else {
           h1.innerHTML += line.charAt(charIndex);
@@ -65,33 +64,58 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to switch the theme
   function switchTheme() {
-  if (isMoonClicked) {
-    // Light Mode
-    main.style.background = "linear-gradient(#c2c2c2, #e3e3e3, #c2c2c2)";
-    navbar.style.cssText = "background-color: #c2c2c2; box-shadow: 0 0 0.5rem #757575";
-    info.style.background = "linear-gradient(#e3e3e3, #c2c2c2)";
-    aboutMeImg.style.cssText = "box-shadow: 3rem 3rem 3rem #bababa";
-    hr.style.cssText = "background: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, #858e9e))";
-    h1.style.color = "#858e9e";
-    lightbox.style.background = "#c2c2c2";
-    navLinks.classList.add("light-mode-color");
-    navLinks.classList.add("light-mode-shadow");
-    moon.style.opacity = 0;
-    sun.style.opacity = 1;
-  } else {
-    // Dark Mode
-    main.style.background = "linear-gradient(#0d0d0e, #18181a, #0d0d0e)";
-    navbar.style.cssText = "background-color: #141518; box-shadow: 0 0 0.5rem #0c0c0e";
-    info.style.background = "linear-gradient(#141518, #0b0c0e)";
-    aboutMeImg.style.cssText = "box-shadow: 3rem 3rem 3rem #0b0c0e";
-    hr.style.cssText = "background: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, #f5f0dc))";
-    h1.style.color = "#f5f0dc";
-    lightbox.style.background = "#141518";
-    navLinks.classList.remove("light-mode-color");
-    navLinks.classList.remove("light-mode-shadow");
-    moon.style.opacity = 1;
-    sun.style.opacity = 0;
-  }
+    if (isMoonClicked) {
+      // Light Mode
+      main.style.background = "linear-gradient(#f5f5f5, #ffffff, #f5f5f5)";
+      navbar.style.cssText =
+        "background-color: #f5f5f5; box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25)";
+      info.style.background = "linear-gradient(#ffffff, #f5f5f5)";
+      aboutMeImg.style.cssText =
+        "box-shadow: 3rem 3rem 3rem rgba(0, 0, 0, 0.25)";
+      hr.style.cssText =
+        "background: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, #858e9e))";
+      h1.style.color = "#858e9e";
+      lightbox.style.background = "#f5f5f5";
+      navLinks.classList.add("light-mode-color");
+      navLinks.classList.add("light-mode-shadow");
+      moon.style.opacity = 0;
+      sun.style.opacity = 1;
+    } else {
+      // Dark Mode
+      main.style.background = "linear-gradient(#0d0d0e, #18181a, #0d0d0e)";
+      navbar.style.cssText =
+        "background-color: #141518; box-shadow: 0 0 0.5rem #0c0c0e";
+      info.style.background = "linear-gradient(#141518, #0b0c0e)";
+      aboutMeImg.style.cssText = "box-shadow: 3rem 3rem 3rem #0b0c0e";
+      hr.style.cssText =
+        "background: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, #f5f0dc))";
+      h1.style.color = "#f5f0dc";
+      lightbox.style.background = "#141518";
+      navLinks.classList.remove("light-mode-color");
+      navLinks.classList.remove("light-mode-shadow");
+      moon.style.opacity = 1;
+      sun.style.opacity = 0;
+    }
+
+    document.documentElement.style.setProperty(
+      "--dark-hover-color",
+      isMoonClicked ? "#b1bac9" : "#f5f0dc"
+    );
+
+    document.documentElement.style.setProperty(
+      "--dark-input-color",
+      isMoonClicked ? "#858e9e" : "#f5f0dc"
+    );
+
+    document.documentElement.style.setProperty(
+      "--dark-button-color",
+      isMoonClicked ? "#fff" : "#585858"
+    );
+
+    document.documentElement.style.setProperty(
+      "--dark-focus-color",
+      isMoonClicked ? "#9fa7b6" : "#cecabb"
+    );
   }
 
   // Apply initial theme
@@ -99,25 +123,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Toggle the theme on click
   themeToggle.addEventListener("click", function () {
-  isMoonClicked = !isMoonClicked;
-  switchTheme();
+    isMoonClicked = !isMoonClicked;
+    switchTheme();
   });
 });
 
 // Toggle the hamburger menu
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
 
-menuToggle.addEventListener('click', function() {
-    navLinks.classList.toggle('show');
+menuToggle.addEventListener("click", function () {
+  navLinks.classList.toggle("show");
 });
 
 // Close the menu when a link is clicked
-const navLinksList = document.querySelectorAll('.nav-links a');
+const navLinksList = document.querySelectorAll(".nav-links a");
 navLinksList.forEach(function (link) {
-  link.addEventListener('click', function () {
-      navLinks.classList.remove('show');
-      menuToggle.classList.remove('menu-open');
+  link.addEventListener("click", function () {
+    navLinks.classList.remove("show");
+    menuToggle.classList.remove("menu-open");
   });
 });
 
@@ -129,7 +153,8 @@ function toggleMenu() {
 document.addEventListener("click", function (event) {
   const menuToggle = document.querySelector(".menu-toggle");
   const navLinks = document.querySelector(".nav-links");
-  const isClickInsideMenu = menuToggle.contains(event.target) || navLinks.contains(event.target);
+  const isClickInsideMenu =
+    menuToggle.contains(event.target) || navLinks.contains(event.target);
   const isMenuOpen = navLinks.classList.contains("show");
 
   if (!isClickInsideMenu && isMenuOpen) {
